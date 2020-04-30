@@ -1,0 +1,52 @@
+{
+  "pages": [
+    "pages/process/process",
+    "pages/login/login",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/personal/personal",
+    "pages/select/select"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#eeeeee",
+    "enablePullDownRefresh": true
+  },
+  "style": "v2",
+  "tabBar": {
+    "selectedColor": "#23c6c8",
+    "custom": false,
+    "list": [
+      {
+        "pagePath": "pages/process/process",
+        "iconPath": "image/tabimage/rw.png",
+        "selectedIconPath": "image/tabimage/rw.png",
+        "text": "上报工序"
+      },
+      {
+        "pagePath": "pages/process/process",
+        "iconPath": "image/tabimage/repair.png",
+        "selectedIconPath": "image/tabimage/repair.png",
+        "text": "上报特殊工序"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "iconPath": "image/tabimage/room.png",
+        "selectedIconPath": "image/tabimage/room.png",
+        "text": "个人中心"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true,
+  "navigateToMiniProgramAppIdList": [
+    "wxe5f52902cf4de896"
+  ],
+  "sitemapLocation": "sitemap62.json"
+}

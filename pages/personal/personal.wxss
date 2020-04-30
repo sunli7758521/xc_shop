@@ -1,0 +1,45 @@
+/* pages/personal/personal.wxss */
+@import "../lib/weui.wxss";
+.text{
+  font-size: 20px;
+  margin-left: 150px;
+}
+.section{
+  margin-bottom: 10rpx;
+}
+/* .page-section{
+  
+} */
+.flex-wrp {
+  display: flex;
+  padding-top: 0.5em;
+}
+.flex {
+    width:auto; height: 100px;
+}
+.flex-item{
+  margin-top: 3em
+}
+button {
+  background-color: green;
+  margin: 10px;
+  
+}
+.flex-text{
+  font-size: 1em;
+  color: black;
+  margin-left: 1em;
+}
+.img{
+  float: left;
+  width: 130rpx;
+  height: 130rpx;
+  margin-left: 2rem;
+}
+.username{
+  margin-left: 20px;
+  margin-top: 15px;
+  float: right;
+  font-size: 20px;
+}
+

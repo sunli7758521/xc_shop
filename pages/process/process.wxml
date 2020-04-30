@@ -1,0 +1,78 @@
+<form bindsubmit="fromsubmit">
+
+<view class="section">
+		<view class="section_title">项目名称</view>
+		<picker bindchange="bindProject"  range="{{projectNameArray}}" value="{{projectNameArray[projectNameIndex].id}}" range-key="{{'projectName'}}" >
+			<view class="picker">
+         	{{projectNameDefut}}		
+			</view>
+		</picker>
+	</view>
+<view class="section">
+  <view class="section_title">作业单位名称</view>
+		<picker bindchange="bindTask"   range="{{taskNameArray}}" value="{{taskNameArray[taskNameIndex].id}}" range-key="{{'taskName'}}">
+			<view class="picker">
+         	{{taskNameDefut}}
+			</view>
+		</picker>
+</view>
+<view class="section_zu">
+  <view class="section_title">作业单位编号</view>
+		<span class="name_input"  name="taskCode">{{taskCode}}</span>
+</view>	
+<view class="section">
+  <view class="section_title">窗号</view>
+		<picker bindchange="winNo"  range="{{winNoArray}}" value="{{winNoArray[winNoIndex].id}}" range-key="{{'winNo'}}">
+			<view class="picker">
+         	{{winNoDefult}}
+			</view>
+		</picker>
+</view>	
+<view class="section_zu">
+  <view class="section_title">窗型</view>
+    	<span class="name_input"  name="taskCode">{{winXing}}</span>	
+</view>  
+<view class="section">
+   <view class="section_title"  wx:if="{{teamBind}}">工序组</view>
+		<picker bindchange="teamBind"  range="{{tempArray}}" value="{{tempArray[tempIndex].id}}"  range-key="{{}}" >
+			<view class="picker"  wx:if="{{team_m}}">
+         	{{teamDefult}}
+			</view>
+		</picker>
+</view>
+<!-- <view class="section">
+  <view class="flex-wrp" style="flex-direction:row;">
+    <view class="flex-item bc_green">1</view>
+    <view class="flex-item bc_red">2</view>
+    <view class="flex-item bc_blue">3</view>
+  </view>
+</view> -->
+  <text wx:if="errInfoTable" class="errInfo">{{errInfoTable}}</text>
+  <view class="table" wx:if="{{tableView}}">
+    <view class="tr bg-w">
+      <view class="th">序号</view>
+      <view class="th">工序</view>
+      <view class="th">单位</view>
+      <view class="th">单价</view>
+      <view class="th">总量</view>
+      <view class="th">剩余量</view>
+      <view class="th">报工</view>
+    </view>
+    <!-- <scroll-view scroll-x="true" scroll-y="true" style='height:{{tbodyHeight}}px;'> -->
+      <block wx:for="{{processArray}}" wx:key="processArray">
+        <view class="tr bg-g">
+          <view class="td">{{index+1}}</view>
+          <view class="td">{{item.processNormName}}</view>
+          <view class="td">{{item.unit}}</view>
+          <view class="td">{{item.price}}</view>
+          <view class="td">{{item.totalNeedNum}}</view>
+          <view class="td">{{item.leftNeedNum}}</view>
+          <view class="td">
+            <input data-index="{{index+1}}" data-unit="{{item.unit}}" data-price="{{item.price}}" data-processNormName="{{item.processNormName}}" data-processNormId="{{item.processNormId}}" data-taskDetailId="{{item.taskDetailId}}" data-processtype="{{item.processType}}"  data-leftNeedNum="{{item.leftNeedNum}}" data-isMilestone="{{item.isMilestone}}" data-milestoneClassify="{{item.milestoneClassify}}" value='{{inputValue}}' type="number" maxlength="9" name="doneNum{{index}}" placeholder="请输入" class='table_input' bindblur="doneInput"></input>
+          </view>
+        </view>
+      </block>
+    <!-- </scroll-view> -->
+  </view>
+  
+</form>

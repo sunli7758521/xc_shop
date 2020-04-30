@@ -1,0 +1,24 @@
+
+<view  class="bg" style="background:url('../../image/loginimg/loginimg.jpeg')">
+<form bindsubmit='searchBox' >
+<view class="login" >
+<view class="form_wap">
+			<view class="flex_wap input_wap">	
+				<text class="label">账号： </text>
+			    <input name="username"  class='account_input' type="text" placeholder="请输入账号"></input>
+			</view>   
+</view>
+<view class="form_wap">
+		<view class="flex_wap input_wap">
+			<text class="label">密码： </text>
+		<input name="password" class='account_input' type="password" placeholder="请输入密码"></input>
+		</view>
+</view>
+<text class="msg" >{{errinfo}}</text>
+<view class="button">
+    <button  class="loginBtn" form-type="submit">登录</button>
+</view> 
+</view>
+</form>
+</view>
+

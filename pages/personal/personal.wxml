@@ -1,0 +1,30 @@
+<!--pages/personal/personal.wxml-->
+<!-- <text class="text">个人中心</text> -->
+<view class="section">
+  <!-- <view class="section__title">flex-direction: row</view> -->
+  <view class="flex-wrp" style="flex-direction:row;">
+    <view class="flex-item">
+        <image src="/image/tabimage/fw.png"  class="img"></image>
+    </view>
+     <view class="flex-item">
+       <text class="username">{{userName}}</text>
+    </view>
+  </view>
+</view>
+<view class="section">
+  <!-- <view class="section__title">flex-direction: column</view> -->
+  <view class="flex-wrp" style="height: 300px;flex-direction:column;">
+    <view class="flex-item">
+       <text class="flex-text" bindtap="toTask">任务分发</text>
+    </view>
+    <view class="flex-item">
+       <text class="flex-text" bindtap="toSelect">自助查询</text>
+    </view>
+    <view class="flex-item">
+       <text class="flex-text" bindtap="toChangePassword">修改密码</text>
+    </view>
+  </view>
+</view>
+<view>
+ <button class="exit" bindtap="exitBindtap">退出</button>
+</view>

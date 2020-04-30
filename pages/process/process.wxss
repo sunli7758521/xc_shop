@@ -1,0 +1,68 @@
+/* pages/process/process.wxss */
+@import "../lib/weui.wxss";
+form{
+  padding:10px 10px 10px 10px;
+}
+.section{
+  display:flex;
+  flex-direction: row;
+  padding: 10px 10px 10px 10px;
+  border: solid 1px #f5f5ed;
+}
+.section_title{
+  width: 40%;
+  font-size: 15px;
+  font-weight: bold;
+  color:grey;
+}
+picker{
+  font-size:16px;
+}
+.section_zu{
+  display: flex;
+  flex-direction: row;
+  padding: 10px 10px 10px 10px;
+  border: solid 1px #f5f5ed;
+  background-color: gainsboro;
+}
+.page-section{
+  margin-bottom: 20rpx;
+}
+.flex-wrp {display: flex;}
+.bc_green {background: green;width:100px; height: 100px;}
+.bc_red {background: red;width:100px; height: 100px;}
+.bc_blue {background: blue;width:100px; height: 100px;}
+
+.table{
+  margin-top: 5px;
+  border: 0px solid darkgray;
+}
+.th {
+  width: 40%;
+  /* 文本居中 */
+  justify-content: center;
+  background: #45d989;
+  color: #fff;
+  display: flex;
+  height: 2rem;
+  align-items: center;
+  font-size:16px;
+}
+.tr{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 3rem;
+  align-items: center;
+  font-size: 9px;
+}
+.td {
+  width:40%;
+  justify-content: center;
+  text-align: center;
+  font-size: 12px;
+  border: 1rem white;
+}
+.errInfo{
+  color: red;
+}
